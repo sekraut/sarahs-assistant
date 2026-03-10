@@ -1,9 +1,9 @@
 {
-  "version": "v260310.01 4:13pm",
-  "release": 1,
-  "sha": "e82f52d",
-  "fullSha": "e82f52dba72cbf929a532b0380b7c16b30df3b1e",
+  "version": "v260310.02 4:22pm",
+  "release": 2,
+  "sha": "bfb45ce",
+  "fullSha": "bfb45ce7f36bb45e1260506302baa87a035ec9cf",
   "actor": "sekraut",
-  "pushedAt": "2026-03-10T21:13:13Z",
-  "commits": [{"sha": "e82f52d", "message": "feat: project setup \u2014 Tailwind CSS v4, update CLAUDE.md, DEPLOY.md docs", "author": "Sarah Kraut"}]
+  "pushedAt": "2026-03-10T21:22:18Z",
+  "commits": [{"sha": "bfb45ce", "message": "feat: Supabase setup \u2014 project, schema, storage", "author": "Sarah Kraut"}]
 }
