@@ -46,13 +46,13 @@ bg-inbox-slack         /* #e91e63 */
 
 ## Auth System (`shared/auth.js`)
 
-Provides login/profile functionality on all pages:
+**Sign-in method:** Google OAuth (primary) + email/password (fallback)
 
-- **Profile button**: Auto-inserts into nav bar. Shows person icon when logged out, initials avatar when logged in.
-- **Login modal**: Email/password via `supabase.auth.signInWithPassword()`.
-- **Dropdown menu**: When logged in, clicking avatar shows "Admin" link and "Sign Out".
+- **Profile button**: Auto-inserts into `.site-nav__inner` (or first `<nav>`). Shows person icon when logged out, Google avatar when logged in.
+- **Login modal**: "Continue with Google" button → `supabase.auth.signInWithOAuth({ provider: 'google' })`. Email/password also available.
+- **Dropdown menu**: When logged in — "Dashboard" link + "Sign Out".
 - **Page guard**: Admin pages call `requireAuth(callback)` — redirects to `../index.html` if not authenticated.
-- **Supabase client**: Exposed as `window.adminSupabase` for admin page data access.
+- **Supabase client**: Exposed as `window.adminSupabase` for data access.
 
 **Script loading order on every page:**
 ```html
@@ -60,6 +60,8 @@ Provides login/profile functionality on all pages:
 <script src="shared/supabase.js"></script>
 <script src="shared/auth.js"></script>
 ```
+
+**OAuth callback flow:** Supabase redirects back to `window.location.origin + pathname` after Google auth. No special callback page needed for GitHub Pages.
 
 ## Admin Pages (`admin/`)
 
