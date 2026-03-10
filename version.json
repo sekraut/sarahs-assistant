@@ -1,9 +1,9 @@
 {
-  "version": "v260310.03 4:46pm",
-  "release": 3,
-  "sha": "567c099",
-  "fullSha": "567c09965ec4c7831e98a1ef5c5247d9d9b5d01e",
+  "version": "v260310.04 4:56pm",
+  "release": 4,
+  "sha": "4a16325",
+  "fullSha": "4a163256c56771a135a298a40950ab616ae2bb34",
   "actor": "sekraut",
-  "pushedAt": "2026-03-10T21:46:42Z",
-  "commits": [{"sha": "567c099", "message": "feat: Google Sign-In (OAuth via Supabase)", "author": "Sarah Kraut"}]
+  "pushedAt": "2026-03-10T21:56:36Z",
+  "commits": [{"sha": "4a16325", "message": "feat: Resend, SignWell, Gemini \u2014 edge functions + client modules", "author": "Sarah Kraut"}]
 }
