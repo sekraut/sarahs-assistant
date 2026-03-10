@@ -11,35 +11,44 @@ When building or modifying any feature that calls a paid API, instrument it to l
 
 ## Configured Services
 
-<!-- Services are added below by the setup wizard -->
+---
 
-### Email (Resend)
+### Supabase ✅
+- Project: https://supabase.com/dashboard/project/vtflffpvetugzvrrrotr
+- Project URL: https://vtflffpvetugzvrrrotr.supabase.co
+- Region: us-east-1
+- Storage buckets: `documents` (private), `attachments` (private)
+- Webhook base URL: `https://vtflffpvetugzvrrrotr.supabase.co/functions/v1/`
+
+---
+
+### Email (Resend) ⏳ pending setup
 - API key stored as Supabase secret: `RESEND_API_KEY`
 - Free tier: 3,000 emails/month
+- Edge function: `send-email`
 
-### SMS (Telnyx)
-- Config in `telnyx_config` table
-- Edge functions: `send-sms`, `telnyx-webhook` (deploy with `--no-verify-jwt`)
-- Cost: ~$0.004/message
+---
 
-### Payments (Square)
-- Config in `square_config` table
-- Edge function: `process-square-payment`
-- Cost: 2.9% + 30c
-
-### Payments + ACH (Stripe)
-- Config in `stripe_config` table
-- ACH: 0.8% capped at $5; Cards: 2.9% + 30c
-
-### E-Signatures (SignWell)
+### E-Signatures (SignWell) ⏳ pending setup
 - Config in `signwell_config` table
 - Edge function: `signwell-webhook` (deploy with `--no-verify-jwt`)
-- Free tier: 3-25 docs/month
+- Webhook URL: `https://vtflffpvetugzvrrrotr.supabase.co/functions/v1/signwell-webhook`
+- Free tier: 3–25 docs/month
 
-### AI Features (Google Gemini)
-- Free tier: 1,000 requests/day, 15 RPM
+---
 
-### Object Storage (Cloudflare R2)
-- Free tier: 10 GB storage, 10M reads/mo, 1M writes/mo, zero egress
+### AI Features (Google Gemini) ⏳ pending setup
+- API key stored as Supabase secret: `GEMINI_API_KEY`
+- Free tier: 1,500 requests/day, 15 RPM (flash model)
+- Edge function: `ai-process` (message analysis, task extraction)
 
-<!-- Only the services you selected during setup will be active -->
+---
+
+### Google Sign-In (OAuth) ⏳ pending setup
+- Auth provider: Google via Supabase Auth
+- Redirect URI: `https://vtflffpvetugzvrrrotr.supabase.co/auth/v1/callback`
+- Client module: `shared/auth.js`
+
+---
+
+<!-- Only the services selected during setup will be active -->

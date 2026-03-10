@@ -1,7 +1,6 @@
-// Supabase Configuration
-// These values are set during infrastructure setup (/setup-alpacapps-infra)
-const SUPABASE_URL = 'YOUR_SUPABASE_URL';
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+// Supabase Configuration — Sarah's Assistant
+const SUPABASE_URL = 'https://vtflffpvetugzvrrrotr.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ0ZmxmZnB2ZXR1Z3p2cnJyb3RyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNzU2ODUsImV4cCI6MjA4ODc1MTY4NX0.KkUosOXmHnYpfevrdJhxfs3gs4CrNxQw48GVJycbvG4';
 
 // Initialize Supabase client
 const supabase = window.supabase
@@ -10,11 +9,12 @@ const supabase = window.supabase
 
 // Storage helpers
 const STORAGE = {
-    photos: {
-        bucket: 'photos',
-        getPublicUrl: (path) => `${SUPABASE_URL}/storage/v1/object/public/photos/${path}`,
-    },
     documents: {
         bucket: 'documents',
+        // Private bucket — get signed URLs for access
+    },
+    attachments: {
+        bucket: 'attachments',
+        // Private bucket — message attachments
     },
 };
