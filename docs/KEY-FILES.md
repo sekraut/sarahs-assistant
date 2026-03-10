@@ -5,8 +5,16 @@
 ## Shared Modules (`/shared/`)
 
 - `supabase.js` — Supabase client singleton (anon key embedded)
-- `auth.js` — Authentication module (profile button, login modal, page guard)
+- `auth.js` — Authentication module (Google OAuth, profile button, page guard)
 - `admin.css` — Admin styles: layout, tables, modals, badges (themeable via CSS custom properties)
+- `email-service.js` — Resend email client: `EmailService.send({ to, subject, html })`
+- `signwell-service.js` — SignWell e-signature wrapper: `SignWellService.createDocument(...)`
+
+## Edge Functions (`/supabase/functions/`)
+
+- `send-email/` — Sends email via Resend API (JWT-protected)
+- `signwell-webhook/` — Handles SignWell document events (no-verify-jwt, HMAC verification)
+- `ai-process/` — Gemini AI: analyze_message, extract_tasks, summarize (JWT-protected)
 
 ## Configuration
 
