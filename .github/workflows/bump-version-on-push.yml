@@ -23,6 +23,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Build Tailwind CSS
+        run: npm ci && npm run css:build
+
       - name: Bump version
         env:
           SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}

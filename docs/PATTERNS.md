@@ -6,14 +6,42 @@
 
 Use design tokens defined in `styles/tailwind.css` `@theme` block. Run `npm run css:build` after adding new classes.
 
-Tailwind v4 uses CSS-first config — no `tailwind.config.js`. Tokens are defined in `@theme`:
+Tailwind v4 uses CSS-first config — no `tailwind.config.js`. Output: `styles/tailwind.out.css` (committed).
+
+**Sarah's Assistant design tokens:**
 
 ```css
-@theme {
-  --color-brand-primary: #your-color;
-  --color-brand-secondary: #your-color;
-  /* add project-specific tokens here */
-}
+/* Brand */
+bg-brand-primary       /* #6366f1 indigo — primary actions */
+bg-brand-secondary     /* #8b5cf6 violet — secondary actions */
+bg-brand-accent        /* #06b6d4 cyan — highlights */
+
+/* Surface */
+bg-surface-base        /* #ffffff */
+bg-surface-muted       /* #f8fafc */
+bg-surface-subtle      /* #f1f5f9 */
+border-surface-border  /* #e2e8f0 */
+
+/* Text */
+text-text-primary      /* #0f172a */
+text-text-secondary    /* #475569 */
+text-text-muted        /* #94a3b8 */
+
+/* Status */
+text-status-success    /* #10b981 */
+text-status-warning    /* #f59e0b */
+text-status-error      /* #ef4444 */
+
+/* Task/Inbox types */
+bg-task-pending        /* #f59e0b */
+bg-task-done           /* #10b981 */
+bg-inbox-email         /* #6366f1 */
+bg-inbox-slack         /* #e91e63 */
+```
+
+**Add Tailwind stylesheet to every HTML page:**
+```html
+<link rel="stylesheet" href="styles/tailwind.out.css">
 ```
 
 ## Auth System (`shared/auth.js`)

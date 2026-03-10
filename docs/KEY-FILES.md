@@ -12,7 +12,12 @@
 
 - `shared/supabase.js` — Supabase URL + anon key (must export globals)
 - `styles/tailwind.css` — Tailwind v4 CSS-first config with `@theme` tokens
+- `styles/tailwind.out.css` — Built CSS output (committed; referenced by all HTML pages)
 - `version.json` — Auto-bumped by CI on every push
+
+## GitHub Actions
+
+- `.github/workflows/bump-version-on-push.yml` — Runs on push to main; builds CSS + bumps version
 
 ## Admin Pages (`/admin/`)
 

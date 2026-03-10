@@ -1,4 +1,4 @@
-# [Your Project Name] — Project Directives
+# Sarah's Assistant — Project Directives
 
 > **On-demand docs — load when the task matches:**
 > - `docs/CREDENTIALS.md` — **load for:** SQL queries, deploying functions, SSH, API calls
@@ -8,9 +8,6 @@
 > - `docs/DEPLOY.md` — **load for:** pushing, deploying, version questions
 > - `docs/INTEGRATIONS.md` — **load for:** external APIs, vendor setup, pricing
 > - `docs/CHANGELOG.md` — **load for:** understanding recent changes, migration context
-
-> **IMPORTANT: First-time setup!**
-> Run `/setup-alpacapps-infra` to set up the full infrastructure interactively.
 
 ## Mandatory Behaviors
 
@@ -30,5 +27,5 @@
 ## Quick Refs
 
 - **Tech:** Vanilla HTML/JS + Tailwind v4 | Supabase | GitHub Pages
-- **Live:** https://USERNAME.github.io/REPO/
+- **Live:** https://sekraut.github.io/sarahs-assistant/
 - **Architecture:** Browser → GitHub Pages → Supabase (no server-side code)

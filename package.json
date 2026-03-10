@@ -1,12 +1,14 @@
 {
-  "name": "alpacapps-infra",
+  "name": "sarahs-assistant",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "css:build": "npx @tailwindcss/cli -i styles/tailwind.css -o styles/tailwind.out.css --minify",
+    "css:watch": "npx @tailwindcss/cli -i styles/tailwind.css -o styles/tailwind.out.css --watch"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.95.3",
@@ -15,6 +17,7 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.2.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
