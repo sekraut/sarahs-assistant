@@ -1,9 +1,9 @@
 {
-  "version": "v260310.02 4:22pm",
-  "release": 2,
-  "sha": "bfb45ce",
-  "fullSha": "bfb45ce7f36bb45e1260506302baa87a035ec9cf",
+  "version": "v260310.03 4:46pm",
+  "release": 3,
+  "sha": "567c099",
+  "fullSha": "567c09965ec4c7831e98a1ef5c5247d9d9b5d01e",
   "actor": "sekraut",
-  "pushedAt": "2026-03-10T21:22:18Z",
-  "commits": [{"sha": "bfb45ce", "message": "feat: Supabase setup \u2014 project, schema, storage", "author": "Sarah Kraut"}]
+  "pushedAt": "2026-03-10T21:46:42Z",
+  "commits": [{"sha": "567c099", "message": "feat: Google Sign-In (OAuth via Supabase)", "author": "Sarah Kraut"}]
 }
